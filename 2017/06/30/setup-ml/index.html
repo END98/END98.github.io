@@ -3,15 +3,22 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hello World | White,Inc.</title>
+  <title>setup:ml | White,Inc.</title>
   <meta name="author" content="John Doe">
   
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in ">
+  <meta name="description" content="日本語
+
+
+About My PC
+PC: MacBookPro(Retina, 13-inch, Early 2015)
+OS: macOS Sierra Version 10.12.5
+Processor: 3.1GHz Intel Core i7
+Memory: 16GB 1867 MHz D">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Hello World"/>
+  <meta property="og:title" content="setup:ml"/>
   <meta property="og:site_name" content="White,Inc."/>
 
   
@@ -45,7 +52,7 @@
   <div class="container" id="container">
 	<div class="content">
 	  <div class="page-header">		
-  <h1><a class="brand" href="/">White,Inc.</a><span class="split"></span><span class="title">Hello World</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 2017-06-29</span></h1>
+  <h1><a class="brand" href="/">White,Inc.</a><span class="split"></span><span class="title">setup:ml</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 2017-06-30</span></h1>
 </div>		
 
 <div class="row page">
@@ -58,15 +65,22 @@
 	  
 
 	  <!-- content -->
-	  <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+	  <button onclick="var text = location.href; var url = text.substr(0, text.length-1)+'-JP/'; document.location = url;">日本語</button>
+
+<p><br></p>
+<p>About My PC</p>
+<pre><code>PC: MacBookPro(Retina, 13-inch, Early 2015)
+OS: macOS Sierra Version 10.12.5
+Processor: 3.1GHz Intel Core i7
+Memory: 16GB 1867 MHz DDR3
+Graphics: Intel Ilis Graphics 6100 1536 MB
+</code></pre><p><br></p>
+<h3 id="Installing-Tensorflow"><a href="#Installing-Tensorflow" class="headerlink" title="Installing Tensorflow"></a>Installing Tensorflow</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.2.0rc2-py3-none-any.whl</div><div class="line">$ sudo pip install --upgrade $TF_BINARY_URL</div></pre></td></tr></table></figure>
+<p>you have to install the <a href="https://github.com/tensorflow/tensorflow#installation" target="_blank" rel="external">nightly build</a></p>
+<p><br></p>
+<h3 id="Installing-Keras"><a href="#Installing-Keras" class="headerlink" title="Installing Keras"></a>Installing Keras</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ pip install keras</div><div class="line">$ mkdir ~/.keras</div><div class="line">$ vim ~/.keras/keras.json</div></pre></td></tr></table></figure>
+<p><br></p>
+<p>edit ~/.keras/keras.json<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    &quot;image_dim_ordering&quot;: &quot;tf&quot;,</div><div class="line">    &quot;epsilon&quot;: 1e-07,</div><div class="line">    &quot;floatx&quot;: &quot;float32&quot;,</div><div class="line">    &quot;backend&quot;: &quot;tensorflow&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 	  
 
 	  <div>
@@ -82,18 +96,20 @@
 		
 	
 		
-	
-		
-	
-		
-	
-		
-	
+			
+			
 		
 	
 		
 			
 			
+			
+		
+	
+		
+	
+		
+	
 		
 	
 	
@@ -102,7 +118,7 @@
 	
 	<li><a href="/"><i class="fa fa-archive"></i>Home</a></li>
 	
-		<li class="next disabled"><a>next<i class="fa fa-arrow-circle-o-right"></i></a></li>
+		<li class="next"><a href="/2017/06/30/paper-ml/" class="alignright next">next<i class="fa fa-arrow-circle-o-right"></i></a></li>
 	
 </ul>
 </div>

@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>setup:ml:JP | White,Inc.</title>
+  <meta name="author" content="John Doe">
+  
+  <meta name="description" content="English
+
+
+About My PC
+PC: MacBookPro(Retina, 13-inch, Early 2015)
+OS: macOS Sierra Version 10.12.5
+Processor: 3.1GHz Intel Core i7
+Memory: 16GB 1867 M">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="setup:ml:JP"/>
+  <meta property="og:site_name" content="White,Inc."/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="White,Inc." type="application/atom+xml">
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">  
+  <link rel="stylesheet" href="/css/sidenav.css" media="screen" type="text/css">  
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+
+</head>
+
+<body id="body" data-spy="scroll" data-target=".toc">
+  <div class="container" id="container">
+	<div class="content">
+	  <div class="page-header">		
+  <h1><a class="brand" href="/">White,Inc.</a><span class="split"></span><span class="title">setup:ml:JP</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 2017-06-30</span></h1>
+</div>		
+
+<div class="row page">
+  <!-- cols -->	
+  
+  
+
+  
+	<div class="col-md-12">
+	  
+
+	  <!-- content -->
+	  <button onclick="var text = location.href; var url = text.substr(0, text.length-4)+'/'; document.location = url;">English</button>
+
+<p><br></p>
+<p>About My PC</p>
+<pre><code>PC: MacBookPro(Retina, 13-inch, Early 2015)
+OS: macOS Sierra Version 10.12.5
+Processor: 3.1GHz Intel Core i7
+Memory: 16GB 1867 MHz DDR3
+Graphics: Intel Ilis Graphics 6100 1536 MB
+</code></pre><p><br></p>
+<h3 id="Installing-Tensorflow"><a href="#Installing-Tensorflow" class="headerlink" title="Installing Tensorflow"></a>Installing Tensorflow</h3><p>Pathの../..googleapis.com/tensorflow/..以下は各自のパソコンと何で動かすか(CPU or GPU)を選択します。<br>それ以降のTensorflowのVersionは、代謝が激しいので最新版(Nightly Build)をインストールしましょう。<br>最新版出ないと動かない場合が多いです。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.2.0rc2-py3-none-any.whl</div><div class="line">$ sudo pip install --upgrade $TF_BINARY_URL</div></pre></td></tr></table></figure>
+<p>you have to install the <a href="https://github.com/tensorflow/tensorflow#installation" target="_blank" rel="external">nightly build</a></p>
+<p><br></p>
+<h3 id="Installing-Keras"><a href="#Installing-Keras" class="headerlink" title="Installing Keras"></a>Installing Keras</h3><p>新しくKerasディレクトリとjsonファイルを作りましょう</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ pip install keras</div><div class="line">$ mkdir ~/.keras</div><div class="line">$ vim ~/.keras/keras.json</div></pre></td></tr></table></figure>
+<p><br></p>
+<p>jsonファイルに以下を書き込みましょう<br>必要に応じてbackendはtensorflowで動かすのか、TheanoかCNTKかを選択してください</p>
+<p>~/.keras/keras.json<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    &quot;image_dim_ordering&quot;: &quot;tf&quot;,</div><div class="line">    &quot;epsilon&quot;: 1e-07,</div><div class="line">    &quot;floatx&quot;: &quot;float32&quot;,</div><div class="line">    &quot;backend&quot;: &quot;tensorflow&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+	  
+
+	  <div>
+  		<center>
+		  <div class="pagination">
+<ul class="pagination">
+	
+	
+	
+	
+	
+	
+		
+			
+			
+		
+	
+		
+	
+		
+	
+		
+			
+			
+			
+		
+	
+		
+	
+		
+	
+	
+	
+		<li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
+	
+	<li><a href="/"><i class="fa fa-archive"></i>Home</a></li>
+	
+		<li class="next"><a href="/2017/06/30/setup-HEXO-JP/" class="alignright next">next<i class="fa fa-arrow-circle-o-right"></i></a></li>
+	
+</ul>
+</div>
+
+		</center>
+	  </div>
+	  
+	</div> <!-- col-md-9/col-md-12 -->
+	
+  </div><!-- row -->
+
+	</div>
+  </div>
+  <div class="container-narrow">
+	<footer> <p>
+  &copy; 2017 John Doe
+  
+      with help from <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-wixo/">Wixo</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.tableofcontents.min.js"></script>
+<script src="/js/tocgenerator.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+</body>
+</html>

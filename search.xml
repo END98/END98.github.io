@@ -3,6 +3,84 @@
   
     
     <entry>
+      <title><![CDATA[setup:ml:JP]]></title>
+      <url>/2017/06/30/setup-ml-JP/</url>
+      <content type="html"><![CDATA[<button onclick="var text = location.href; var url = text.substr(0, text.length-4)+'/'; document.location = url;">English</button>
+
+<p><br></p>
+<p>About My PC</p>
+<pre><code>PC: MacBookPro(Retina, 13-inch, Early 2015)
+OS: macOS Sierra Version 10.12.5
+Processor: 3.1GHz Intel Core i7
+Memory: 16GB 1867 MHz DDR3
+Graphics: Intel Ilis Graphics 6100 1536 MB
+</code></pre><p><br></p>
+<h3 id="Installing-Tensorflow"><a href="#Installing-Tensorflow" class="headerlink" title="Installing Tensorflow"></a>Installing Tensorflow</h3><p>Pathの../..googleapis.com/tensorflow/..以下は各自のパソコンと何で動かすか(CPU or GPU)を選択します。<br>それ以降のTensorflowのVersionは、代謝が激しいので最新版(Nightly Build)をインストールしましょう。<br>最新版出ないと動かない場合が多いです。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.2.0rc2-py3-none-any.whl</div><div class="line">$ sudo pip install --upgrade $TF_BINARY_URL</div></pre></td></tr></table></figure>
+<p>you have to install the <a href="https://github.com/tensorflow/tensorflow#installation" target="_blank" rel="external">nightly build</a></p>
+<p><br></p>
+<h3 id="Installing-Keras"><a href="#Installing-Keras" class="headerlink" title="Installing Keras"></a>Installing Keras</h3><p>新しくKerasディレクトリとjsonファイルを作りましょう</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ pip install keras</div><div class="line">$ mkdir ~/.keras</div><div class="line">$ vim ~/.keras/keras.json</div></pre></td></tr></table></figure>
+<p><br></p>
+<p>jsonファイルに以下を書き込みましょう<br>必要に応じてbackendはtensorflowで動かすのか、TheanoかCNTKかを選択してください</p>
+<p>~/.keras/keras.json<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    &quot;image_dim_ordering&quot;: &quot;tf&quot;,</div><div class="line">    &quot;epsilon&quot;: 1e-07,</div><div class="line">    &quot;floatx&quot;: &quot;float32&quot;,</div><div class="line">    &quot;backend&quot;: &quot;tensorflow&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+]]></content>
+      
+        <categories>
+            
+            <category> JP </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[setup:ml]]></title>
+      <url>/2017/06/30/setup-ml/</url>
+      <content type="html"><![CDATA[<button onclick="var text = location.href; var url = text.substr(0, text.length-1)+'-JP/'; document.location = url;">日本語</button>
+
+<p><br></p>
+<p>About My PC</p>
+<pre><code>PC: MacBookPro(Retina, 13-inch, Early 2015)
+OS: macOS Sierra Version 10.12.5
+Processor: 3.1GHz Intel Core i7
+Memory: 16GB 1867 MHz DDR3
+Graphics: Intel Ilis Graphics 6100 1536 MB
+</code></pre><p><br></p>
+<h3 id="Installing-Tensorflow"><a href="#Installing-Tensorflow" class="headerlink" title="Installing Tensorflow"></a>Installing Tensorflow</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.2.0rc2-py3-none-any.whl</div><div class="line">$ sudo pip install --upgrade $TF_BINARY_URL</div></pre></td></tr></table></figure>
+<p>you have to install the <a href="https://github.com/tensorflow/tensorflow#installation" target="_blank" rel="external">nightly build</a></p>
+<p><br></p>
+<h3 id="Installing-Keras"><a href="#Installing-Keras" class="headerlink" title="Installing Keras"></a>Installing Keras</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ pip install keras</div><div class="line">$ mkdir ~/.keras</div><div class="line">$ vim ~/.keras/keras.json</div></pre></td></tr></table></figure>
+<p><br></p>
+<p>edit ~/.keras/keras.json<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    &quot;image_dim_ordering&quot;: &quot;tf&quot;,</div><div class="line">    &quot;epsilon&quot;: 1e-07,</div><div class="line">    &quot;floatx&quot;: &quot;float32&quot;,</div><div class="line">    &quot;backend&quot;: &quot;tensorflow&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+]]></content>
+      
+        <categories>
+            
+            <category> MachineLearning </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[paper:ml]]></title>
+      <url>/2017/06/30/paper-ml/</url>
+      <content type="html"><![CDATA[<p><a href="https://nips.cc/Conferences/2016" target="_blank" rel="external">NIPS 2016</a><br><a href="https://github.com/timothyrubin/python_gclda" target="_blank" rel="external">GitHub</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> MachineLearning </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[setup:HEXO:JP]]></title>
       <url>/2017/06/30/setup-HEXO-JP/</url>
       <content type="html"><![CDATA[<button onclick="var text = location.href; var url = text.substr(0, text.length-4)+'/'; document.location = url;">English</button>
@@ -98,8 +176,6 @@ theme: wixo
 ]]></content>
       
         <categories>
-            
-            <category> Blog </category>
             
             <category> JP </category>
             
@@ -213,10 +289,11 @@ theme: wixo
     
     <entry>
       <title><![CDATA[paper:CV]]></title>
-      <url>/2017/06/29/paper-CV/</url>
+      <url>/2017/06/29/paper-cv/</url>
       <content type="html"><![CDATA[<div style="width: 50%"><br><script async class="speakerdeck-embed" data-id="961d58b9d5c7420bb78d3751aaaad123" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script><br></div>
 
-<p><br></p>
+
+
 <div style="width: 50%"><br><script async class="speakerdeck-embed" data-id="70d597028c814017b2aeaea899d5e661" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script><br></div>]]></content>
       
         <categories>
