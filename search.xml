@@ -19,7 +19,9 @@
 <p><a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a></p>
 <p>もし止めたければ,ctl+cで止まります</p>
 <p>If you want to stop server, you should <strong>ctl+c</strong></p>
-<p><br><br>ブログディレクトリの中身です<br>特に重要なのは_config.ymlで、ブログのテーマや、ブログをGithubに連携させる<br><br>プラグインの設定などに使います。<br>生成したブログ記事はsouce/_postsディレクトリに置かれます<br>また、themeの中はテーマを入れた後それのデザインを変える場合などでよく使います</p>
+<p><br><br>ブログディレクトリの中身です<br>特に重要なのは_config.ymlで、ブログのテーマや、ブログをGithubに連携させる<br>プラグインの設定などに使います。</p>
+<p>生成したブログ記事はsouce/_postsディレクトリに置かれます</p>
+<p>また、themeの中はテーマを入れた後それのデザインを変える場合などでよく使います</p>
 <pre><code>_config.yml
 package-lock.json
 scaffolds
@@ -30,7 +32,8 @@ source
 node_modules
 public
 themes
-</code></pre><p>私の記事が意味不明な場合はここを参考にしてください。<br>Githubと連携させる部分以外は大変参考になるサイトです</p>
+</code></pre><p><br></p>
+<p>私の記事が意味不明な場合はここを参考にしてください。<br>Githubと連携させる部分以外は大変参考になるサイトです</p>
 <p><a href="https://liginc.co.jp/web/programming/server/104594" target="_blank" rel="external">how to install HEXO</a></p>
 <p><br></p>
 <h2 id="Private-blogs-made-with-HEXO-on-Local-Server"><a href="#Private-blogs-made-with-HEXO-on-Local-Server" class="headerlink" title="Private blogs made with HEXO on Local Server"></a>Private blogs made with HEXO on Local Server</h2><p>簡単に記事を作り、見ることができるのでデプロイする前にローカル環境で毎回構築するのがオススメです</p>
@@ -86,9 +89,7 @@ theme: wixo
 <p><br></p>
 <h2 id="Summary-of-Error"><a href="#Summary-of-Error" class="headerlink" title="Summary of Error"></a>Summary of Error</h2><p><br></p>
 <h3 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h3><p>npm自体が古いなどの理由などでパッケージやインストールを求められるエラーが出ます。<br>リンクに飛んでください。大抵のエラーはここに載っています。</p>
-<p>When you install npm, it occurs errro.</p>
-<p>You do an update and installation, the ploblem is settled.</p>
-<p>I want to you to refer to <a href="http://qiita.com/M-ISO/items/d693ac892549fc95c14c#npm-warn-deprecated" target="_blank" rel="external">npm errors</a></p>
+<p>When you install npm, it occurs errro.<br>You do an update and installation, the ploblem is settled.<br>I want to you to refer to <a href="http://qiita.com/M-ISO/items/d693ac892549fc95c14c#npm-warn-deprecated" target="_blank" rel="external">npm errors</a></p>
 <p><br></p>
 <h3 id="github"><a href="#github" class="headerlink" title="github"></a>github</h3><p>私は作り方を少し間違えたので毎回コンフリクトを起こします。<br>その場合は、これで無理やり通しています。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git merge --allow-unrelated-histories origin/master</div></pre></td></tr></table></figure>]]></content>
