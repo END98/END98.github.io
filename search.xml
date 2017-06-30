@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[setup:HEXO:JP]]></title>
       <url>/2017/06/30/setup-HEXO-JP/</url>
-      <content type="html"><![CDATA[<button onclick="document.location='https://end98.github.io/2017/06/30/setup-HEXO/';">English Page</button>
+      <content type="html"><![CDATA[<button onclick="var text = location.href; var url = text.substr(0, text.length-4)+'/'; document.location = url;">English</button>
 
 <h1 id="Preparation"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation</h1><p>以下の二つの環境を用意してください。<br>Node.jsのバージョンが低いとnpmでインストールするものとかが一気に増えるのでできるだけ<br>最新の環境を用意するとストレスレスでブログを作れると思います。</p>
 <ul>
@@ -111,7 +111,8 @@ theme: wixo
     <entry>
       <title><![CDATA[setup:HEXO]]></title>
       <url>/2017/06/30/setup-HEXO/</url>
-      <content type="html"><![CDATA[<button onclick="document.location='https://end98.github.io/2017/06/30/setup-HEXO-JP/';">Japanese Page</button>
+      <content type="html"><![CDATA[<button onclick="var text = location.href; var url = text.substr(0, text.length-1)+'-JP/'; document.location = url;">日本語</button>
+
 
 <h1 id="Preparation"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation</h1><p>please prepare the following two environments.<br>If you use the old version of Node.js, it will increase about npm’s installation package.<br>You should prepare the latest environment as much as possible.</p>
 <ul>
